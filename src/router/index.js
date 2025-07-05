@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import RulesView from '../views/RulesView.vue';
 import CodexView from '../views/CodexView.vue';
@@ -38,7 +38,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory('/ocw/dist/'),
   routes,
   linkActiveClass: 'bg-gray-200 dark:bg-gray-700'
 });

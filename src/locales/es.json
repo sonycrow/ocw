@@ -1,0 +1,45 @@
+{
+  "appTitle": "Códice OCW",
+  "navigation": {
+    "home": "Inicio",
+    "rules": "Reglas",
+    "codex": "Códice",
+    "skills": "Habilidades",
+    "traits": "Rasgos"
+  },
+  "home": {
+    "title": "Bienvenido al Códice de OCW",
+    "welcome": "Explora las cartas, reglas y mecánicas de nuestro juego. Usa el menú para navegar por las diferentes secciones."
+  },
+  "rules": {
+    "title": "Reglamento del Juego"
+  },
+  "codex": {
+    "title": "Códice",
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar por nombre...",
+    "filterByType": "Filtrar por tipo",
+    "allTypes": "Todos los tipos",
+    "filterByClass": "Filtrar por clase",
+    "allClasses": "Todas las clases",
+    "galleryView": "Galería",
+    "tableView": "Tabla",
+    "cardImageAlt": "Imagen de la carta {cardName}",
+    "noResults": "No se encontraron cartas con los filtros actuales.",
+    "table": {
+      "name": "Nombre",
+      "type": "Tipo",
+      "class": "Clase",
+      "cost": "Coste",
+      "hp": "HP",
+      "atk": "ATK",
+      "def": "DEF"
+    }
+  },
+  "skills": {
+    "title": "Listado de Habilidades"
+  },
+  "traits": {
+    "title": "Listado de Rasgos"
+  }
+}

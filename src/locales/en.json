@@ -1,0 +1,45 @@
+{
+  "appTitle": "OCW Codex",
+  "navigation": {
+    "home": "Home",
+    "rules": "Rules",
+    "codex": "Card Codex",
+    "skills": "Skills",
+    "traits": "Traits"
+  },
+  "home": {
+    "title": "Welcome to the OCW Codex",
+    "welcome": "Explore the cards, rules, and mechanics of our game. Use the menu to navigate through the different sections."
+  },
+  "rules": {
+    "title": "Game Rules"
+  },
+  "codex": {
+    "title": "Codex",
+    "search": "Search",
+    "searchPlaceholder": "Search by name...",
+    "filterByType": "Filter by type",
+    "allTypes": "All types",
+    "filterByClass": "Filter by Class",
+    "allClasses": "All Classes",
+    "galleryView": "Gallery",
+    "tableView": "Table",
+    "cardImageAlt": "Image of card {cardName}",
+    "noResults": "No cards found with the current filters.",
+    "table": {
+      "name": "Name",
+      "type": "Type",
+      "class": "Class",
+      "cost": "Cost",
+      "hp": "HP",
+      "atk": "ATK",
+      "def": "DEF"
+    }
+  },
+  "skills": {
+    "title": "List of Skills"
+  },
+  "traits": {
+    "title": "List of Traits"
+  }
+}

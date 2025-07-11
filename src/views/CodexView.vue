@@ -26,6 +26,10 @@ const closeModal = () => {
   selectedCard.value = null;
 };
 
+const setViewMode = (mode) => {
+  viewMode.value = mode
+}
+
 const filteredCards = computed(() => {
     return allCards.filter(card => {
         const name = card.name[locale.value] || card.name.es;
@@ -59,10 +63,17 @@ const uniqueClasses = computed(() => [...new Set(allCards.map(card => card.class
           <option v-for="cls in uniqueClasses" :key="cls" :value="cls" class="capitalize">{{ getTraitName(cls) }}</option>
         </select>
       </div>
-      <div>
-        <button @click="viewMode = 'gallery'" :class="{'bg-blue-500 text-white': viewMode === 'gallery'}" class="p-2 rounded-l-md border dark:border-gray-600">{{ $t('codex.galleryView') }}</button>
-        <button @click="viewMode = 'table'" :class="{'bg-blue-500 text-white': viewMode === 'table'}" class="p-2 rounded-r-md border dark:border-gray-600">{{ $t('codex.tableView') }}</button>
+      
+       <!-- View Switcher -->
+      <div class="self-end">
+        <button @click="setViewMode('gallery')" :class="{'bg-blue-500 text-white': viewMode === 'gallery'}" class="p-2 rounded-l-md border dark:border-gray-600" :title="$t('codex.galleryView')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 001 1h14a1 1 0 001-1V4a1 1 0 00-1-1H3zm1 2h3v3H4V5zm5 0h3v3H9V5zm5 0h3v3h-3V5zm-5 5h3v3H9v-3zm-5 0h3v3H4v-3zm10 0h3v3h-3v-3z" clip-rule="evenodd" /></svg>
+        </button>
+        <button @click="setViewMode('table')" :class="{'bg-blue-500 text-white': viewMode === 'table'}" class="p-2 rounded-r-md border dark:border-gray-600" :title="$t('codex.tableView')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" /></svg>
+        </button>
       </div>
+      
     </div>
     <p v-if="filteredCards.length === 0" class="text-center text-gray-500 dark:text-gray-400 mt-8">{{ $t('codex.noResults') }}</p>
     <div v-else>
